@@ -7,14 +7,22 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 
-import DraftsIcon from '@mui/icons-material/Drafts';
-import { Grid4x4, ListAltSharp } from '@mui/icons-material';
+
+import { Event, ListAltSharp, MonetizationOn, NetworkCheckRounded, SupervisedUserCircle, TableChart } from '@mui/icons-material';
 
 function NavDash() {
   return (
     <Box sx={{ bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
         <List>
+        <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <NetworkCheckRounded />
+              </ListItemIcon>
+              <ListItemText  primary="Dashboard" />
+            </ListItemButton>
+          </ListItem>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -26,33 +34,33 @@ function NavDash() {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Grid4x4 />
+                <Event />
               </ListItemIcon>
-              <ListItemText primary="Tableaux" />
+              <ListItemText primary="Events" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Grid4x4 />
+                <TableChart />
               </ListItemIcon>
-              <ListItemText primary="Tableaux" />
+              <ListItemText primary="Epreuves" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Grid4x4 />
+                <MonetizationOn />
               </ListItemIcon>
-              <ListItemText primary="Tableaux" />
+              <ListItemText primary="Paiement" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Grid4x4 />
+                <SupervisedUserCircle />
               </ListItemIcon>
-              <ListItemText primary="Tableaux" />
+              <ListItemText primary="Joueurs" />
             </ListItemButton>
           </ListItem>
         </List>
