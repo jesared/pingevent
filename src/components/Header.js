@@ -129,8 +129,11 @@ export default function Header() {
             }}
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
+
         >
-            <MenuItem>
+            
+            
+            {/* <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="error">
                         <MailIcon />
@@ -149,6 +152,19 @@ export default function Header() {
                     </Badge>
                 </IconButton>
                 <p>Notifications</p>
+            </MenuItem> */}
+            <MenuItem>
+            <IconButton
+        size="large"
+        aria-label=""
+        color="inherit"
+    >
+        <Link to='/dashboard' style={{ textDecoration: 'none', color: '#333' }}>
+            <NetworkCheckRounded />
+           
+        </Link>
+
+    </IconButton> <p>Dashboard</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton

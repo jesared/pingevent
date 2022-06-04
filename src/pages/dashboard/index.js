@@ -16,7 +16,7 @@ const DashBoard = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} >
-        <Grid item xs='auto' sx={{ height: '100vh', position: 'sticky', top: 50, borderRight: '1px solid #eee', }}>
+        <Grid item xs='auto' sx={{ height: '100vh', position: 'sticky', top: 60, borderRight: '1px solid #eee', }}>
           <NavDash />
         </Grid>
         <Grid item xs={9} sx={{ marginTop: 5 }}>

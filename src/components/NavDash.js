@@ -12,7 +12,7 @@ import { Event, ListAltSharp, MonetizationOn, NetworkCheckRounded, SupervisedUse
 
 function NavDash() {
   return (
-    <Box sx={{ bgcolor: 'background.paper' }}>
+    <Box sx={{ bgcolor: 'background.paper', marginTop: 3 }}>
       <nav aria-label="main mailbox folders">
         <List>
         <ListItem disablePadding>
