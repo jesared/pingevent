@@ -6,17 +6,16 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
+
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
-import { NetworkCheckRounded } from '@mui/icons-material';
+import { NetworkCheckRounded, Close } from '@mui/icons-material';
 import logo from '../assets/animal.png'
 
 const Search = styled('div')(({ theme }) => ({
@@ -116,6 +115,7 @@ export default function Header() {
     const mobileMenuId = 'primary-search-account-menu-mobile';
     const renderMobileMenu = (
         <Menu
+            
             anchorEl={mobileMoreAnchorEl}
             anchorOrigin={{
                 vertical: 'top',
@@ -129,10 +129,13 @@ export default function Header() {
             }}
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
-
         >
-            
-            
+            <IconButton>
+                <Close sx={{
+                    float:'left',
+                }} onClick={handleMobileMenuClose} />
+            </IconButton>
+
             {/* <MenuItem>
                 <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="error">
@@ -154,35 +157,36 @@ export default function Header() {
                 <p>Notifications</p>
             </MenuItem> */}
             <MenuItem>
-            <IconButton
-        size="large"
-        aria-label=""
-        color="inherit"
-    >
-        <Link to='/dashboard' style={{ textDecoration: 'none', color: '#333' }}>
-            <NetworkCheckRounded />
-           
-        </Link>
-
-    </IconButton> <p>Dashboard</p>
+                <Link to='/dashboard' style={{ textDecoration: 'none', color: '#333' }}>
+                    <IconButton
+                        size="large"
+                        aria-label=""
+                        color="inherit"
+                    >
+                        <NetworkCheckRounded />
+                    </IconButton>
+                    Dashboard
+                </Link>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>Profile</p>
+                <Link to='/profile' style={{ textDecoration: 'none', color: '#333' }}>
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
+                    Profile
+                </Link>
             </MenuItem>
         </Menu>
     );
 
     return (
-        <Box sx={{ flexGrow: 1, marginTop: '70px' }}>
+        <Box sx={{ flexGrow: 1, marginTop: '45px' }}>
             <AppBar position="fixed">
                 <Toolbar>
                     <IconButton

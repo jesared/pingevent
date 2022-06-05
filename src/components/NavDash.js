@@ -12,7 +12,7 @@ import { Event, ListAltSharp, MonetizationOn, NetworkCheckRounded, SupervisedUse
 
 function NavDash() {
   return (
-    <Box sx={{ bgcolor: 'background.paper', marginTop: 3 }}>
+    <Box sx={{ bgcolor: '#f5f5f5', paddingTop: 3, height:'100vh', margin:0, position: 'sticky', top:'50px'}}>
       <nav aria-label="main mailbox folders">
         <List>
         <ListItem disablePadding>
@@ -66,7 +66,6 @@ function NavDash() {
         </List>
       </nav>
       <Divider />
-      
     </Box>
   );
 }

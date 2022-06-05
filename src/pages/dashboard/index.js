@@ -14,25 +14,37 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const DashBoard = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} >
-        <Grid item xs='auto' sx={{ height: '100vh', position: 'sticky', top: 60, borderRight: '1px solid #eee', }}>
+    <>
+    
+          
+    {/* <NavDash sx={{display: {xs: 'block', sm: 'none', md: 'none', lg: 'none'}}}/> */}
+    
+    <Box sx={{ flexGrow: 1 }}> 
+    
+      <Grid container spacing='auto' >
+        <Grid item  md='auto' sx={{display: { xs: 'none', sm: 'none', md: 'block' }, borderRight: '1px solid #eee', }}>
           <NavDash />
         </Grid>
-        <Grid item xs={9} sx={{ marginTop: 5 }}>
+       
+        <Grid item xs={12} sm={12} md={4} lg={6} xl={6}  sx={{ margin: '30px auto' }}>
           <Item>
             <Typography variant="h3">
               Résumé du dashboard
             </Typography>
-
             <BasicTimeline />
-
-
           </Item>
-
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}  sx={{ margin: '30px auto' }}>
+          <Item>
+            <Typography variant="h3">
+              Résumé du dashboard
+            </Typography>
+            <BasicTimeline />
+          </Item>
         </Grid>
       </Grid>
     </Box>
+    </>
   )
 }
 
