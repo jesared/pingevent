@@ -17,6 +17,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
 import { NetworkCheckRounded, Close } from '@mui/icons-material';
 import logo from '../assets/animal.png'
+import { Stack } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -114,6 +115,8 @@ export default function Header() {
 
     const mobileMenuId = 'primary-search-account-menu-mobile';
     const renderMobileMenu = (
+
+        
         <Menu
             
             anchorEl={mobileMoreAnchorEl}
@@ -130,38 +133,27 @@ export default function Header() {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
-            <IconButton>
-                <Close sx={{
-                    float:'left',
-                }} onClick={handleMobileMenuClose} />
-            </IconButton>
 
-            {/* <MenuItem>
-                <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
-                        <MailIcon />
-                    </Badge>
-                </IconButton>
-                <p>Messages</p>
-            </MenuItem>
-            <MenuItem>
-                <IconButton
-                    size="large"
-                    aria-label="show 17 new notifications"
-                    color="inherit"
-                >
-                    <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
-                <p>Notifications</p>
-            </MenuItem> */}
-            <MenuItem>
+<Stack onClick={handleMobileMenuClose} sx={{
+            position:'absolute',
+            right:0,
+            top:-10,
+            
+        }}>
+    <IconButton>
+        <Close  />
+    </IconButton>
+</Stack>
+            
+
+          
+            <MenuItem onClick={handleMobileMenuClose}>
                 <Link to='/dashboard' style={{ textDecoration: 'none', color: '#333' }}>
                     <IconButton
                         size="large"
                         aria-label=""
                         color="inherit"
+                       
                     >
                         <NetworkCheckRounded />
                     </IconButton>
@@ -185,8 +177,17 @@ export default function Header() {
         </Menu>
     );
 
+
     return (
+
         <Box sx={{ flexGrow: 1, marginTop: '45px' }}>
+
+            {/* <Stack  sx={{position:'absolute', zIndex:9999, top:'70px'}}>
+                <IconButton onClick={() => setIsDashOpen(!isDashOpen)}>
+                   {isDashOpen ? <DragHandle /> : <Close />} 
+                </IconButton>
+            </Stack> */}
+
             <AppBar position="fixed">
                 <Toolbar>
                     <IconButton
@@ -221,20 +222,7 @@ export default function Header() {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton> */}
+                      
                         <IconButton
                             size="large"
                             aria-label=""

@@ -15,44 +15,38 @@ export default function BasicTimeline() {
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot sx={{ bgcolor: pink[500] }} >
-          
-          
-  <ListAltOutlined />
-
+            <ListAltOutlined />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent >
-        <Typography variant="h6" component="span">Gerer son événement en ligne
-        </Typography>
+          <Typography variant="h6" component="span">Gerer son événement en ligne
+          </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator >
-        <TimelineDot sx={{ bgcolor: green[500] }}>
-          <TableChart  />
-            
+          <TimelineDot sx={{ bgcolor: green[500] }}>
+            <TableChart />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="h6" component="span">
             Ajouter des épreuves
-            </Typography> </TimelineContent>
+          </Typography> </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-        <TimelineDot sx={{ bgcolor: deepOrange[500] }} >
-          <Event />
-            
+          <TimelineDot sx={{ bgcolor: deepOrange[500] }} >
+            <Event />
           </TimelineDot>
         </TimelineSeparator>
         <TimelineContent >
-        <Typography variant="h6" component="span">
-          Création d'un événement Ping
+          <Typography variant="h6" component="span">
+            Création d'un événement Ping
           </Typography>
-          </TimelineContent>
-        
+        </TimelineContent>
       </TimelineItem>
     </Timeline>
   );
