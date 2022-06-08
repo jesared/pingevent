@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid, List, ListItem, ListItemText, Paper, Typography } from "@mui/material";
 import image from '../../../assets/animal.png'
 
 
@@ -15,12 +15,45 @@ export default function Events() {
     return (
         <>
 
-            <Grid item xs={12} sm={12} md={4} lg={6} xl={6} sx={{ margin: '30px auto' }}>
+            <Grid item xs={10} sx={{ margin: '30px auto' }}>
                 <Item>
                     <Typography variant="h3">
                         Vos événements
                     </Typography>
-                    <img src={image} alt="image" width={250}/>
+                    <Typography variant="h4">
+                        Récapitulatif des événements de l'organisateur
+                    </Typography>
+                    <Typography variant="h6">
+                        Bouton d'ajout
+                    </Typography>
+                    <List>
+                        <Typography variant="h6">formulaire d'ajout</Typography>
+                        <ListItem>
+                            <ListItemText primary="titre de l'événement" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="range date ou single date" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="catégorie" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="cover / image" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="organisateur" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="adresse" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="reglement" />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText primary="épreuves" />
+                        </ListItem>
+                    </List>
+                    <img src={image} alt="animal" width={250}/>
                 </Item>
             </Grid>
 

@@ -9,17 +9,18 @@ import Divider from '@mui/material/Divider';
 
 
 import { Event, ListAltSharp, MonetizationOn, NetworkCheckRounded, SupervisedUserCircle, TableChart } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 
 function NavDash() {
+ 
 
   return (
 
     <Box sx={{ bgcolor: '#f5f5f5', paddingTop: 3, height: '100vh', margin: 0, position: 'sticky', top: '50px' }}>
       <nav aria-label="main dashboard folders" className='dashboard'> 
         <List>
-          <Link to='/dashboard' sx={{ textDecoration: 'none', color: '#333' }}>
+          <NavLink to='/dashboard'  >
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -28,16 +29,18 @@ function NavDash() {
                 <ListItemText primary="Dashboard" />
               </ListItemButton>
             </ListItem>
-          </Link>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <ListAltSharp />
-              </ListItemIcon>
-              <ListItemText primary="List" />
-            </ListItemButton>
-          </ListItem>
-          <Link to='/dashboard/events' sx={{ textDecoration: 'none', color: '#333' }}>
+          </NavLink>
+          <NavLink to='/dashboard/list'  >
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ListAltSharp />
+                </ListItemIcon>
+                <ListItemText primary="List" />
+              </ListItemButton>
+            </ListItem>
+          </NavLink>
+          <NavLink  to='/dashboard/events' >
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -46,7 +49,7 @@ function NavDash() {
                 <ListItemText primary="Events" />
               </ListItemButton>
             </ListItem>
-          </Link>
+          </NavLink>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>

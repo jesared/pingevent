@@ -5,7 +5,7 @@ import React from "react";
 function NavDashMobile() {
 
   const [isDashOpen, setIsDashOpen] = React.useState(false)
-  const newLeft = '-299px';
+  const newLeft = '-199px';
 
   return (
     <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }}>

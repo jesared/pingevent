@@ -6,6 +6,7 @@ import Header from './components/Header';
 import DashBoard from './pages/dashboard';
 import DashBoardAccueil from './pages/dashboard/DashBoardAccueil';
 import Events from './pages/dashboard/events';
+import List from './pages/dashboard/list';
 
 
 import Home from './pages/home';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<DashBoard />} >
             <Route path="/dashboard" element={<DashBoardAccueil />} />
+            <Route path='/dashboard/list' element={<List />} />
             <Route path='/dashboard/events' element={<Events />} />
           </Route>
           
